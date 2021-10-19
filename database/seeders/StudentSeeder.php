@@ -20,7 +20,6 @@ class StudentSeeder extends Seeder
             'department' => 'JTI-MI',
             'phone_number' => '0858-5395-7585',
         ]);
-
         DB::table('students')->insert([
             'nim' => '2031710177',
             'name' => 'Ghulam Al Fakhri',
@@ -28,7 +27,6 @@ class StudentSeeder extends Seeder
             'department' => 'JTI-MI',
             'phone_number' => '0857-4556-9538',
         ]);
-
         DB::table('students')->insert([
             'nim' => '2031710034',
             'name' => 'Jihan Rahadatul Aisy',
