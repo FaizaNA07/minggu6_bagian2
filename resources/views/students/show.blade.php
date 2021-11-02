@@ -8,23 +8,13 @@
                 <div class="card-header">{{ __('STUDENT DATA DETAILS') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    <form action="/students/{{$student->id}}" method="get">
-                    @csrf
-                        <table class="table table-responsive">
-                            <tr><th>NIM</th><th>:</th><td>{{ $student -> nim}}</td></tr>
-                            <tr><th>Name</th><th>:</th><td>{{ $student -> name}}</td></tr>
-                            <tr><th>Class</th><th>:</th><td>{{ $student -> class}}</td></tr>
-                            <tr><th>Department</th><th>:</th><td>{{ $student -> department}}</td></tr>
-                            <tr><th>Phone Number</th><th>:</th><td>{{ $student -> phone_number}}</td></tr>
-                            <tr></tr>
-                        </table>
-                    </form>
+                    <table class="table table-responsive">
+                        <tr><th>Id</th><th>:</th><td>{{ $student->id }}</td></tr>
+                        <tr><th>NIM</th><th>:</th><td>{{ $student->nim }}</td></tr>
+                        <tr><th>Name</th><th>:</th><td>{{ $student->name }}</td></tr>
+                        <tr><th>Class</th><th>:</th><td> {{ $student->kelas->class_name }}</td></tr>
+                        <tr><th>Department</th><th>:</th><td>{{ $student->department }}</td></tr>
+                        <tr><th>Phone Number</th><th>:</th><td>{{ $student->phone_number }}</td></tr>
                 </div>
             </div>
         </div>
